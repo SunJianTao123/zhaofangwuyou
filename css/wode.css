@@ -1,0 +1,115 @@
+body {
+    background: #F5F5F5;
+}
+
+.my,
+.xiazai {
+    width: 2rem;
+}
+
+.my-header {
+    width: 100%;
+    height: 22em;
+    background: url(../jpg/image/my/bg1.png);
+    background-size: 100% 20rem;
+    border-bottom: 1px solid #eee;
+}
+
+.my-header .active {
+    display: block !important;
+}
+
+.my-header .my-dl,
+.my-header .hello {
+    display: none;
+}
+
+.my-list .after-li {
+    width: 90%;
+    margin: 3rem 2rem;
+    list-style: none;
+    text-align: center;
+    height: 4.5rem;
+    padding: 0rem;
+    line-height: 4.5rem;
+    font-size: 16px;
+    color: #FEA336;
+    border: 1px solid #D7D7D7;
+}
+
+.add-img {
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -4rem;
+    top: 5rem;
+    width: 8rem;
+}
+
+.my-header {
+    text-align: center;
+}
+
+.my-header .hello {
+    position: relative;
+    top: 15rem;
+    width: 50%;
+    margin: auto;
+    font-size: 16px;
+    color: #fff;
+}
+
+.center-logo {
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -3rem;
+    top: 5rem;
+}
+
+.center-logo img {
+    width: 8rem;
+    margin-left: -1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.my-header a {
+    position: absolute;
+    width: 7rem;
+    padding: 0.5rem;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    left: 50%;
+    margin-left: -3.5rem;
+    top: 15rem;
+    border-radius: 0.2rem;
+    display: none;
+}
+
+.my-list img {
+    width: 2rem;
+    float: left;
+}
+
+.my-list p {
+    margin-left: 3rem;
+    font-size: 16px;
+    float: left;
+}
+
+.my-list li img:last-child {
+    float: right;
+    width: 1rem;
+}
+
+.my-list li {
+    background-color: #fff;
+    height: 6rem;
+    padding: 2rem;
+    border-bottom: 1px solid #eee;
+}

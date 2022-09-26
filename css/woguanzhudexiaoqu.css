@@ -1,0 +1,23 @@
+.rmfy-list ul li {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.rmfy-list ul li h4 {
+    font-weight: 400;
+}
+
+.rmfy-list ul li span {
+    font-weight: bold;
+}
+
+.rmfy-list ul li p {
+    line-height: 3.5rem;
+    font-size: 13px;
+    color: #6C6C6C;
+}
+
+.rmfy-list ul li img {
+    width: 11rem;
+    height: 8.5rem;
+}

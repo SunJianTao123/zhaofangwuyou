@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的</title>
+    <script src="./js/zepto.js"></script>
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <script src="./js/tiaozhuan.js"></script>
+    <style>
+        .my,
+        .xiazai {
+            width: 2rem;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/wode.css">
+    <script>
+        $(function() {
+            var user = JSON.parse(sessionStorage.getItem("user"));
+            // console.log(user.cell);
+            var li = $("<li class='after-li'>退出登录</li>");
+
+            var div = $("<p>首页</p>");
+            var img = $('<img class="add-img" src="./jpg/image/my/urse2.png" alt="">');
+
+
+            if (user != null) {
+                $(".my-header .hello").addClass("active");
+                $(".my-header .my-dl").removeClass("active");
+                $(".name").text(user.cell);
+                $(".my-list ul").after(li);
+                $(".img-none").css("display", "none");
+                $(".center-logo").before(img);
+            } else {
+                $(".my-header .my-dl").addClass("active");
+                $(".my-header .hello").removeClass("active");
+            }
+
+            $(".my-list .after-li").click(function() {
+                // alert(1)
+                sessionStorage.clear();
+                location.reload();
+
+                $(".img-none").css("display", "block");
+                $(".center-logo").remove(img);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <section class="my-header">
+        <img class="my" src="./jpg/image/my/down.png" alt="">
+        <img class="xiazai" src="./jpg/image/my/urse.png" alt="">
+
+        <div class="center-logo">
+            <img class="img-none" src="./jpg/image/my/logo.png" alt="">
+        </div>
+        <a class="my-dl active" href="./denglu.html">登录</a>
+        <p class="hello">欢迎您: &nbsp;<span class="name"></span></p>
+    </section>
+    <section class="my-list">
+        <ul>
+            <li>
+                <img src="./jpg/image/my/icon1.png" alt="">
+                <p>我关注的房源</p>
+                <img src="./jpg/image/my/right.png" alt="">
+            </li>
+            <li id="guanzhuxiaoqu">
+                <img src="./jpg/image/my/icon2.png" alt="">
+                <p>我关注的小区</p>
+                <img src="./jpg/image/my/right.png" alt="">
+            </li>
+            <li>
+                <img src="./jpg/image/my/icon3.png" alt="">
+                <p>我关注的新房</p>
+                <img src="./jpg/image/my/right.png" alt="">
+            </li>
+            <li>
+                <img src="./jpg/image/my/icon4.png" alt="">
+                <p>我的看房记录</p>
+                <img src="./jpg/image/my/right.png" alt="">
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>

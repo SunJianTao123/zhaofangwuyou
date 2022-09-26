@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/denglu.css">
+    <script src="./js/zepto.js"></script>
+    <script src="./js/tiaozhuan.js"></script>
+    <style>
+        #yzmdl {
+            display: block;
+        }
+        
+        .cell {
+            width: 8rem;
+            text-align: center;
+            top: 11rem;
+            color: #757575;
+        }
+        
+        .ljdl a {
+            color: white;
+        }
+    </style>
+    <script src="./js/fasongyanzhengma.js"></script>
+    <script src="./js/tiaozhuan.js"></script>
+</head>
+
+<body>
+    <header class="header-dl ">
+        <img class="logo " src="./jpg/image/index/logo.jpg" alt="">
+        <select name="" id="">
+            <option value="bei">北京</option>
+        </select>
+        <img class="my" id="my-t" src="./jpg/image/index/my.jpg" alt="">
+        <img class="xiazai" src="./jpg/image/index/xiazai.jpg" alt="">
+    </header>
+    <section class="header-list">
+        <div>
+            <p id="home">首页</p>
+            <img src="./jpg/image/index/7da0b6e58606025d81b7ac64df9aba9.png" alt="">
+            <p class="my-t" id="my-t">我的</p>
+            <img src="./jpg/image/index/7da0b6e58606025d81b7ac64df9aba9.png" alt="">
+            <p>注册</p>
+        </div>
+    </section>
+    <section>
+        <form action="">
+            <div id="yzmdl" class="ptdl-list">
+                <input placeholder="请输入手机号码" type="text" pattern="^1[0-9]{10}$">
+                <a class="cell" id="cell" href="#">发送验证码</a>
+                <input placeholder="请输入短信中的验证码" type="password">
+                <input placeholder="输入新密码" type="password" pattern="^[a-zA-Z]\w{5,17}$">
+                <div class="ljdl">
+                    <p id="dl"><input type="submit" style="color: #fff;" value="提交"></p>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

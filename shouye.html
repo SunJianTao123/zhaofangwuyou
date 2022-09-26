@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/shouye.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <script src="./js/zepto.js"></script>
+    <script src="./js/tiaozhuan.js"></script>
+    <script>
+        $(function() {
+            $(".rmgz-title>h2").click(function() {
+                var index = $(this).index();
+                $(".box ul").eq(index).show().siblings().hide();
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+            $(".box-img").click(function() {
+                $(this).parent().remove("box-hide")
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <header class="clear">
+        <img class="logo" src="./jpg/image/index/logo.jpg" alt="">
+        <img class="my" id="my-t" src="./jpg/image/index/my.jpg" alt="">
+        <img class="xiazai" src="./jpg/image/index/xiazai.jpg" alt="">
+    </header>
+    <main class="shouye-main">
+        <img class="banner" src="./jpg/image/index/banner.png" alt="">
+        <input class="main-btn" value="输入小区或商圈名开始找房" type="text">
+        <p class="sousuo">
+            <img src="./jpg/image/index/seach.jpg" alt="">
+        </p>
+    </main>
+    <section class="list">
+        <ul>
+            <li id="ershoufanglist"><img src="./jpg/image/index/index_03.png" alt="">
+                <p>二手房</p>
+            </li>
+            <li id="xinfang"><img src="./jpg/image/index/index_05.png" alt="">
+                <p>新房</p>
+            </li>
+            <li id="zufang"><img src="./jpg/image/index/index_07.png" alt="">
+                <p>租房</p>
+            </li>
+            <li id="maifang"><img src="./jpg/image/index/index_09.png" alt="">
+                <p>买房</p>
+            </li>
+        </ul>
+    </section>
+    <section class="set-banner">
+        <img src="./jpg/image/index/banner2.png" alt="">
+    </section>
+    <section class="rmfy">
+        <div class="title">
+            <h2>热门房源</h2>
+            <p>Hot house</p>
+        </div>
+        <div class="rmfy-list">
+            <ul>
+                <li>
+                    <img src="./jpg/image/index/img1.jpg" alt="">
+                    <h3>文化部最T中间层</h3>
+                    <p>2室1厅96m <span class="span-c">1105万</span></p>
+                    <p class="p-a">红庙北里<span class="span-h">14268元/平</span></p>
+                    <a href="">学区房</a>
+                    <a href="">独家</a>
+                </li>
+                <li>
+                    <img src="./jpg/image/index/img2.png" alt="">
+                    <h3>光大水墨 精装复式 稀缺</h3>
+                    <p>2室1厅96m <span class="span-c">280万</span></p>
+                    <p class="p-a">光大水墨<span class="span-h">14268元/平</span></p>
+                    <a href="">学区房</a>
+                    <a href="">独家</a>
+                    <a href="">满五唯一</a>
+                </li>
+                <li>
+                    <img src="./jpg/image/index/img3.png" alt="">
+                    <h3>文化部最T中间层</h3>
+                    <p>2室1厅96m <span class="span-c">320万</span></p>
+                    <p class="p-a">北京新天地<span class="span-h">14268元/平</span></p>
+                    <a href="">地铁房</a>
+                    <a href="">独家</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="rmgz">
+        <div class="rmgz-title">
+            <h2 class=" a active">热门关注</h2>
+            <h2 class="a">友情链接</h2>
+        </div>
+        <div class="box">
+            <ul class="show">
+                <li>
+                    <a href="">北京二手房</a>
+                </li>
+                <li>
+                    <a href="">北京找房无忧</a>
+                </li>
+                <li>
+                    <a href="">北京二手房价</a>
+                </li>
+                <li>
+                    <a href="">青年家园</a>
+                </li>
+                <li>
+                    <a href="">海淀日租房</a>
+                </li>
+                <li>
+                    <a href="">免税房源</a>
+                </li>
+                <li>
+                    <a href="">朝阳新房</a>
+                </li>
+                <li>
+                    <a href="">满五年唯一免税</a>
+                </li>
+            </ul>
+            <ul class=" hide show">
+                <li>
+                    <a href="">满五年唯一免税</a>
+                </li>
+                <li>
+                    <a href="">朝阳新房</a>
+                </li>
+                <li>
+                    <a href="">免税房源</a>
+                </li>
+                <li>
+                    <a href="">海淀日租房</a>
+                </li>
+                <li>
+                    <a href="">青年家园</a>
+                </li>
+                <li>
+                    <a href="">北京二手房价</a>
+                </li>
+                <li>
+                    <a href="">北京找房无忧</a>
+                </li>
+                <li>
+                    <a href="">北京二手房</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-top">
+            <p>
+                北京找房无忧> 首页
+            </p>
+        </div>
+        <div class="footer-con">
+            <ul>
+                <li>
+                    <img src="./jpg/image/index/apple.png" alt="">
+                    <p>iPhone</p>
+                    <p>客户端</p>
+                </li>
+                <li>
+                    <img src="./jpg/image/index/android.png" alt="">
+                    <p>android</p>
+                    <p>客户端</p>
+                </li>
+            </ul>
+        </div>
+        <div class="foot">
+            <p>北京找房无忧房地产有限公司</p>
+            <p>网络经营许可证 京ICP备20160812号-12</p>
+        </div>
+    </footer>
+    <div class="box-hide">
+        <div class="box-img"></div>
+        <div class="box-con">
+            <p>
+                <img src="./jpg/image/index/download.png" alt="">
+            </p>
+            <p>
+                找房无忧 <br>
+                <span>市场行情，一手掌握!</span>
+            </p>
+        </div>
+        <div class="box-xiazai">
+            免费下载
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>房源信息</title>
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/fangyuanxinxi.css">
+    <script src="./js/zepto.js"></script>
+    <script src="./js/tiaozhuan.js"></script>
+    <style>
+        .broker #container {
+            overflow: hidden;
+            width: 100%;
+            height: 20rem;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+        
+        #container .anchorBL img {
+            display: contents;
+        }
+        
+        .info {
+            z-index: 999;
+            width: auto;
+            min-width: 22rem;
+            padding: .75rem 1.25rem;
+            margin-left: 1.25rem;
+            position: fixed;
+            top: 1rem;
+            background-color: #fff;
+            border-radius: .25rem;
+            font-size: 14px;
+            color: #666;
+            box-shadow: 0 2px 6px 0 rgba(27, 142, 236, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-dl ">
+        <img class="logo " src="./jpg/image/index/logo.jpg" alt="">
+        <select name="" id="">
+            <option value="bei">北京</option>
+        </select>
+        <img class="my" id="my-t" src="./jpg/image/index/my.jpg" alt="">
+        <img class="xiazai" src="./jpg/image/index/xiazai.jpg" alt="">
+    </header>
+    <section class="catalog clear">
+        <p id="home">首页</p>
+        <img src="./jpg/image/index/9fcbb9a804761601f07c1bdd0951740.png" alt="">
+        <p id="zufang">北京租房</p>
+        <img src="./jpg/image/index/9fcbb9a804761601f07c1bdd0951740.png" alt="">
+        <p>房源信息</p>
+    </section>
+    <section class="fy-main">
+        <div class="fy-main-top">
+            <img src="./jpg/image/SecondHandList/img.png" alt="">
+            <p>
+                分享
+            </p>
+        </div>
+        <div class="fy-main-title">
+            <p class="fy-left">天鹅湾西北3.8米高厅两居，业主换房急售</p>
+            <p class="fy-right">
+                <img src="./jpg/image/rentalList/xin.png" alt=""><br>
+                <span>关注</span>
+            </p>
+        </div>
+        <div class="fy-m">
+            <ul>
+                <li>
+                    <p>租金</p>
+                    <p>2300元/月</p>
+                </li>
+                <li>
+                    <p>房型</p>
+                    <p>2室1厅</p>
+                </li>
+                <li>
+                    <p>面积</p>
+                    <p>204平米</p>
+                </li>
+            </ul>
+        </div>
+        <div class="fy-len">
+            <ul>
+                <li>楼层： <span>高楼层/17层</span></li>
+                <li>朝向： <span>南北</span></li>
+                <li>装修： <span>精装</span></li>
+                <li>供暖： <span>集体供暖</span></li>
+                <li>年代： <span>2007年</span></li>
+                <li>楼型： <span>板楼</span></li>
+            </ul>
+        </div>
+    </section>
+    <section class="fy-container">
+        <div class="broker">
+            <p>
+                经纪人房评
+                <span><img src="./jpg/image/rentalList/right.png" alt=""></span>
+            </p>
+            <p style="font-size: 12px;padding-top: 1rem;color: #717171;line-height: 2rem;">
+                地理位置：京都国际处于酒仙桥中心地带，临北京三大商圈，紧邻丽都商圈，隔四环与望京商圈相望，西南紧挨燕莎商圈，地理位置优越。周边配套：颐堤港商业中心兆维大厦。。。
+            </p>
+        </div>
+        <div class="broker client">
+            <p>
+                客户看房记录
+                <span><img src="./jpg/image/rentalList/right.png" alt=""></span>
+            </p>
+            <p style="font-size: 12px;padding-top: 1rem;color: #717171;">
+                近一个月新增
+                <i style="color: #DE6B49;">0 </i>位看房客户，共<i style="color: #DE6B49;">50 </i>位
+            </p>
+        </div>
+        <div class="broker">
+            <p>
+                位置及周边
+                <span><img src="./jpg/image/rentalList/right.png" alt=""></span>
+
+
+                <!-- <div class="info">最新版GL地图命名空间为BMapGL, 可按住鼠标右键控制地图旋转、修改倾斜角度。</div> -->
+                <div id="container"></div>
+
+            </p>
+            <p style="font-size: 12px;padding-top: 1rem;color: #717171;">
+                地址：【黄村】时代龙和
+            </p>
+        </div>
+        <div class="broker">
+            <p style="color: black;">
+                小区成交历史 （24）
+                <span><img src="./jpg/image/rentalList/right.png" alt=""></span>
+            </p>
+            <p class="lon">
+                3 室 2 厅，146平，<i style="color:#DF683F;">5000元</i>
+            </p>
+            <p class="lon">签约时间：2015-02-26</p>
+        </div>
+    </section>
+    <section class="fy-footer">
+        <div class="fy-footer-left">
+            <p><img src="./jpg/image/rentalList/man.png" alt=""></p>
+            <div class="age">
+                <p>张 三</p>
+                <p>4000234421转 0008</p>
+            </div>
+        </div>
+        <div class="fy-footer-right">
+            <div class="fy-footer-cell">
+                <div class="zhidian">
+                    <p><img src="./jpg/image/rentalList/icon1.png" alt=""></p>
+                    <p>
+                        致电
+                    </p>
+                </div>
+                <div class="duanxin">
+                    <p><img src="./jpg/image/rentalList/icon2.png" alt=""></p>
+                    <p>
+                        短信
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=cr4yGSpuFodhTf18FXren6GqnUxWl6Zn"></script>
+    <script>
+        var map = new BMapGL.Map('container'); // 创建Map实例
+        map.centerAndZoom(new BMapGL.Point(116.348654, 39.743066), 15); // 初始化地图,设置中心点坐标和地图级别
+        map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+    </script>
+</body>
+
+</html>

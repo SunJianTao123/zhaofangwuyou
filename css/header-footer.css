@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+header {
+    width: 100%;
+    height: 5rem;
+    background-color: #FF8A0D;
+}
+
+.logo {
+    width: 12rem;
+    padding: 0.6rem;
+    float: left;
+}
+
+.my {
+    width: 3rem;
+    float: right;
+    margin: 0.5rem 2rem 0 0;
+}
+
+.xiazai {
+    width: 3rem;
+    float: right;
+    margin: 0.5rem 2rem 0 0;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer {
+    height: 15rem;
+    background-color: rgb(42, 39, 39);
+}
+
+header select {
+    position: absolute;
+    top: 1.7rem;
+    background-color: #FF8A0D;
+    border: 1px solid #FF8A0D;
+    color: #FEFDFC;
+    font-size: 16px;
+}
+
+.catalog {
+    padding: 1rem;
+    font-size: 14px;
+    color: #606060;
+}
+
+.catalog p,
+.catalog img {
+    float: left;
+    margin-left: 0.5rem;
+}
+
+.catalog img {
+    width: 1.2rem;
+}
+
+.footer-top {
+    padding: 1rem;
+    font-weight: bold;
+    color: #6b6666;
+    border-bottom: 1px solid #463f3f;
+}
+
+.footer-con {
+    height: 7rem;
+}
+
+.footer-con li img {
+    float: left;
+    width: 3rem;
+}
+
+.footer-con li {
+    /* width: 25%; */
+    float: left;
+    padding-left: 7rem;
+    margin-top: 2rem;
+}
+
+.footer-con li p {
+    padding-left: 4rem;
+    margin-top: 0.2rem;
+    color: #6b6666;
+}
+
+.foot {
+    height: 3rem;
+}
+
+.foot p {
+    text-align: center;
+    color: #6b6666;
+}

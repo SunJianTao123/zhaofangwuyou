@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <script src="./js/zepto.js"></script>
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <script src="./swiper/swiper-bundle.min(1).js"></script>
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/xiangqingye.css">
+    <script src="./js/tiaozhuan.js"></script>
+    <script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=cr4yGSpuFodhTf18FXren6GqnUxWl6Zn"></script>
+    <style>
+        #container {
+            overflow: hidden;
+            width: 100%;
+            height: 20rem;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+        
+        #container .anchorBL img {
+            display: contents;
+        }
+        
+        .info {
+            z-index: 999;
+            width: auto;
+            min-width: 22rem;
+            padding: .75rem 1.25rem;
+            margin-left: 1.25rem;
+            position: fixed;
+            top: 1rem;
+            background-color: #fff;
+            border-radius: .25rem;
+            font-size: 14px;
+            color: #666;
+            box-shadow: 0 2px 6px 0 rgba(27, 142, 236, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-dl ">
+        <img class="logo " src="./jpg/image/index/logo.jpg" alt="">
+        <select name="" id="">
+            <option value="bei">北京</option>
+        </select>
+        <img class="my" id="home" src="./jpg/image/index/my.jpg" alt="">
+        <img class="xiazai" src="./jpg/image/index/xiazai.jpg" alt="">
+    </header>
+    <section class="chart">
+        <div class="swiper" id="swiperA">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./jpg/image/SecondHandList/img.png" alt=""></div>
+                <div class="swiper-slide"><img src="./jpg/image/rentalList/banner.png" alt=""></div>
+                <div class="swiper-slide"><img src="./jpg/image/index/banner.png" alt=""></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+
+    </section>
+    <section class="xq-title clear">
+        <h3>天鹅湾小区精装两居，满五唯一，业主换房急售</h3>
+        <p class="xq-title-jg"><span class="jg">576</span>万元（单价：46327元/平）<span class="phone"><img src="./jpg/image/SecondHandList/phone.png" alt=""></span></p>
+        <p class="sj">挂盘时间2015年6月20号</p>
+        <a href="">学区房</a>
+        <a href="">独家</a>
+        <a href="">满五唯一</a>
+    </section>
+    <section class="k"></section>
+    <section class="xq-hx">
+        <ul>
+            <li>户型：<span>3室两厅</span></li>
+            <li>面积：<span>100平</span></li>
+            <li>楼层：<span>中楼层</span></li>
+            <li>朝向：<span>南西</span></li>
+            <li>装修：<span>精装</span></li>
+            <li>楼型：<span>塔楼</span></li>
+            <li>年底：<span>2004年</span></li>
+            <li>区域：<span>西二镇</span></li>
+            <li>首付：<span>123万</span></li>
+            <li>月供：<span>15683万</span></li>
+            <li class="hx-li">地铁： <span>离西二旗地铁站800米</span></li>
+            <li class="hx-li">小区： <span>珠江帝景</span></li>
+            <li class="hx-li">学校：<span>北京室第二实验小学</span></li>
+            <li id="hx-gd">更多房源信息</li>
+        </ul>
+    </section>
+    <section class="k"></section>
+    <section class="xq-ts">
+        <h3>房源特色</h3>
+        <p class="x">
+            小区环境优雅，虽处闹市中（小区南200米有美廉美超市、西30米有华联商场、星美国际影城、东北角就是大中电器、小区100米有汇佳幼儿园、昌平实验一小，昆泰国际大酒店）
+        </p>
+        <p id="hx-gd">更多特色</p>
+    </section>
+    <section class="k"></section>
+    <section class="xq-ts">
+        <h3>户型分类</h3>
+        <ul>
+            <li>
+                <img src="./jpg/image/SecondHandList/img4.png" alt="">
+                <h4>当前格局</h4>
+
+                <p class="l">分间信息：客厅25平米 南北通透</p>
+                <p class="l">
+                    <a href="">独家</a>
+                    <a href="">满五唯一</a>
+                </p>
+            </li>
+            <li>
+                <img src="./jpg/image/SecondHandList/img4.png" alt="">
+                <h4>当前格局</h4>
+
+                <p class="l">分间信息：客厅25平米 南北通透</p>
+                <p class="l">
+                    <a href="">独家</a>
+                    <a href="">满五唯一</a>
+                </p>
+            </li>
+
+        </ul>
+    </section>
+    <section class="k"></section>
+
+    <section class="dkscholl">
+        <h3> 对口学校</h3>
+        <ul>
+            <li>学校名称： <span>北京市第二实验小学</span></li>
+            <li>升学方式： <span>直升 派位</span></li>
+            <li>对口升学： <span>团结湖中学</span></li>
+            <li>划片小区： <span>3个划片小区 在售房源150套</span></li>
+            <li>学校特色： <span>包食宿、有校车</span></li>
+            <li id="hx-gd">查看学校详情</li>
+        </ul>
+    </section>
+    <section class="k"></section>
+    <section class="position">
+        <h3> 位置及周边</h3>
+        <div id="container">
+
+
+        </div>
+    </section>
+    <section class="k"></section>
+    <section class="tjfy">
+        <h3>推荐房源</h3>
+        <ul>
+            <li>
+                <img src="./jpg/image/SecondHandList/img5.png" alt="">
+                <h4>文化部最中间层 一层带...</h4>
+                <p>2室1厅96m 南北<span class="j">1105万</span></p>
+                <p>红庙北里<span>14268元/平</span></p>
+
+                <p><a href="">学区房</a></p>
+
+                <div>
+                    <p class="sj"></p>
+                    推荐理由：同户型、通风好、采光好
+                </div>
+            </li>
+            <li>
+                <img src="./jpg/image/SecondHandList/img6.png" alt="">
+                <h4>光大水墨 精装复式 稀缺...</h4>
+                <p>2室1厅96m 南北<span class="j">280万</span></p>
+                <p>光大水墨<span>14268元/平</span></p>
+
+                <p><a href="">学区房</a></p>
+
+                <div>
+                    <p class="sj"></p>
+                    推荐理由：同户型、通风好、采光好
+                </div>
+            </li>
+            <p id="hx-gd">查看更多相似房源</p>
+        </ul>
+    </section>
+    <section class="k"></section>
+    <footer>
+        <div class="footer-top">
+            <p>
+                北京找房无忧> 首页
+            </p>
+        </div>
+        <div class="footer-con">
+            <ul>
+                <li>
+                    <img src="./jpg/image/index/apple.png" alt="">
+                    <p>iPhone</p>
+                    <p>客户端</p>
+                </li>
+                <li>
+                    <img src="./jpg/image/index/apple.png" alt="">
+                    <p>iPhone</p>
+                    <p>客户端</p>
+                </li>
+            </ul>
+        </div>
+        <div class="foot">
+            <p>北京找房无忧房地产有限公司</p>
+            <p>网络经营许可证 京ICP备20160812号-12</p>
+        </div>
+    </footer>
+    <script>
+        var mySwiper = new Swiper('#swiperA', {
+            // direction: 'vertical', // 垂直切换选项
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            autoplay: true, // 开启自定切换  默认3s
+            autoplay: {
+                delay: 1000
+            },
+        });
+        var map = new BMapGL.Map('container'); // 创建Map实例
+        map.centerAndZoom(new BMapGL.Point(116.348654, 39.743066), 15); // 初始化地图,设置中心点坐标和地图级别
+        map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+    </script>
+</body>
+
+</html>

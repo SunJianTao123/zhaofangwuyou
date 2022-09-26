@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>找回密码</title>
+    <script src="./js/zepto.js"></script>
+    <link rel="stylesheet" href="./css/denglu.css">
+    <script src="./js/tiaozhuan.js"></script>
+    <style>
+        #yzmdl {
+            display: block;
+        }
+        
+        .cell {
+            top: 11rem;
+        }
+    </style>
+    <script src="./js/zepto.js"></script>
+    <script>
+        $(function() {
+            var timer = 60;
+            var i = 1;
+            $(".yzm").click(function() {
+                var time = setInterval(function() {
+                    con.innerHTML = "(" + (timer - i) + ") 秒" + "重发";
+                    con.style.color = "#ACACAC";
+                    i++;
+
+                    if (timer - i == 0) {
+                        clearInterval(time);
+                    }
+                }, 1000)
+            })
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <header class="header-dl ">
+        <img class="logo " src="./jpg/image/index/logo.jpg" alt="">
+        <select name="" id="">
+            <option value="bei">北京</option>
+        </select>
+        <img class="my" id="my-t" src="./jpg/image/index/my.jpg" alt="">
+        <img class="xiazai" src="./jpg/image/index/xiazai.jpg" alt="">
+    </header>
+    <section class="header-list">
+        <div>
+            <p id="home">首页</p>
+            <img src="./jpg/image/index/7da0b6e58606025d81b7ac64df9aba9.png" alt="">
+            <p>找回密码</p>
+
+        </div>
+    </section>
+
+    <section>
+        <form action="">
+            <div id="yzmdl" class="ptdl-list">
+                <input placeholder="请输入手机号码" type="text" pattern="^1[0-9]{10}$">
+                <a class="cell yzm" id="con" href="#">发送验证码</a>
+                <input placeholder="请输入短信中的验证码" type="text">
+                <input placeholder="输入新密码" type="password" pattern="^[a-zA-Z]\w{5,17}$">
+                <input placeholder="确认新密码" type="password" pattern="^[a-zA-Z]\w{5,17}$">
+                <div class="ljdl">
+                    <p id="dl"><input type="submit" style="color: #fff;" value="提交"></p>
+                </div>
+            </div>
+        </form>
+
+    </section>
+</body>
+
+</html>

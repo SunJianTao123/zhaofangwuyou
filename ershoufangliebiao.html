@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>租房列表</title>
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/zufangliebiao-con.css">
+    <link rel="stylesheet" href="./css/zufangliebiao-header.css">
+    <script src="./js/zepto.js"></script>
+    <script src="./js/tiaozhuan.js"></script>
+    <script>
+        $(function() {
+            $(".ul-block li").mouseover(function() {
+                var index = $(this).index();
+                $(".none .ul-none").eq(index).show().siblings().hide();
+                $(this).addClass("list-active").siblings().removeClass("list-active")
+                $(this).children().addClass("p2-active");
+                $(this).siblings().children().removeClass("p2-active");
+                $(".none").css({
+                    "display": "block"
+                });
+            });
+
+            $(".quyu-title #quyu").mouseover(function() {
+                $(this).children().show();
+                $(this).css({
+                    "background": "#fff",
+                    "color": "#FF8A00",
+                    "borderBottom": "1px solid #d1caca",
+                    "borderRight": "1px solid transparent"
+                });
+            });
+            $(".quyu-title #quyu").mouseout(function() {
+                $(this).children().hide();
+                $(this).css({
+                    "background": "#F0F0F0",
+                    "color": "#747474",
+                    "borderBottom": "1px solid transparent",
+                    "borderRight": "1px solid #d1caca"
+                });
+            });
+            $("#quyu .quyu-left div").mouseover(function() {
+                $(this).children().show();
+                $(this).css({
+                    "background": "#fff",
+                    "color": "#FF8A00"
+                });
+            });
+            $("#quyu .quyu-left div").mouseout(function() {
+                $(this).children().hide();
+                $(this).css({
+                    "background": "#F0F0F0",
+                    "color": "#747474"
+                });
+            });
+            $(".yes").click(function() {
+                $(".ul-none").hide();
+            })
+        })
+    </script>
+    <style>
+        .login {
+            font-size: 12px;
+            margin-left: 1rem;
+        }
+        
+        .list-title {
+            border-top: 1px solid #C9C9C9;
+        }
+        
+        .zxq {
+            padding: 0.5rem 1rem 2rem 1rem;
+        }
+        
+        .zxq img {
+            width: 3rem;
+            height: 3rem;
+        }
+        
+        .zxq li p {
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        
+        .zxq ul {
+            display: flex;
+        }
+        
+        .zxq li {
+            flex: 1;
+            justify-content: flex-end;
+        }
+        
+        .mf img {
+            width: 3rem;
+            height: 3rem;
+        }
+        
+        .mf p {
+            text-align: center;
+        }
+        
+        .mf ul {
+            display: flex;
+            padding-left: 1rem;
+        }
+        
+        .mf li {
+            padding-left: 2rem;
+        }
+        
+        .hq {
+            width: 95%;
+            height: 4rem;
+            border: 1px solid #C9C9C9;
+            margin: 2rem auto;
+        }
+        
+        .hq img {
+            width: 3rem;
+            padding-top: 0.8rem;
+        }
+        
+        .hq img,
+        .hq p {
+            float: left;
+            line-height: 4rem;
+        }
+        
+        .hq .p1 span {
+            font-weight: bold;
+            font-size: 15px;
+        }
+        
+        .hq .p1 {
+            float: left;
+        }
+        
+        .hq .p2 {
+            float: right;
+            margin-right: 1rem;
+            text-align: right;
+            color: #AEAEAE;
+        }
+        
+        .hq .p2 span:first-child {
+            position: relative;
+            top: -0.5rem;
+            border: 4px solid transparent;
+            border-bottom: 4px solid red;
+        }
+        
+        .hq .p2 span:nth-child(2) {
+            padding-left: 0.5rem;
+            color: #000;
+        }
+        
+        .hq .p2 i {
+            display: inline-block;
+            border-top: 2px solid;
+            border-right: 2px solid;
+            width: 1rem;
+            height: 1rem;
+            border-color: #AEAEAE;
+            transform: rotate(45deg);
+            /* margin: 50px auto auto 100px; */
+        }
+        
+        .nb {
+            padding: 0 1rem 2rem 1rem;
+            position: relative;
+        }
+        
+        .nb ul {
+            display: flex;
+        }
+        
+        .nb li {
+            padding: 1rem;
+            flex: 1;
+        }
+        
+        .nb li:nth-child(1) {
+            background-color: #F8F9F4;
+            width: 35%;
+            height: 10rem;
+            margin-right: 1rem;
+        }
+        
+        .nb li:nth-child(2) {
+            background-color: #F0F8F8;
+            width: 35%;
+            height: 10rem;
+        }
+        
+        .nb img {
+            width: 6rem;
+            height: 4rem;
+            border-radius: 0.4rem;
+        }
+        
+        .nb li p {
+            padding-bottom: 0.5rem;
+        }
+        
+        .nb li p:first-child {
+            font-weight: bold;
+        }
+        
+        .nb li p:nth-child(2) {
+            font-size: 12px;
+            color: #C3A661;
+        }
+        
+        .nb li p img:nth-child(1) {
+            margin-right: 1rem;
+        }
+        
+        .nb li:nth-child(2) p:nth-child(2) {
+            font-size: 12px;
+            color: #87B8B3;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <header class="header-dl ">
+        <img class="logo " src="./jpg/image/index/logo.jpg" alt="">
+        <select name="" id="">
+            <option value="bei">北京</option>
+        </select>
+        <img class="my" id="home" src="./jpg/image/index/my.jpg" alt="">
+        <img class="xiazai" src="./jpg/image/index/xiazai.jpg" alt="">
+    </header>
+    <section class="catalog clear">
+        <p id="home">首页</p>
+        <img src="./jpg/image/index/9fcbb9a804761601f07c1bdd0951740.png" alt="">
+        <p>二手房 <span class="login">交易保障 买卖都放心</span></p>
+    </section>
+    <section class="grabble">
+        <input placeholder="请输入小区名或地址" type="text">
+        <p><img src="./jpg/image/SecondHandList/search_03.png" alt=""></p>
+    </section>
+    <section class="zxq">
+        <ul>
+            <li>
+                <p><img src="./jpg/image/1104afd6c968d9233b018933f60d68010.png" alt=""></p>
+                <p>找小区</p>
+            </li>
+            <li>
+                <p><img src="./jpg/image/1104afd6c968d9233b018933f60d68011.png" alt=""></p>
+                <p>帮我找房</p>
+            </li>
+            <li>
+                <p><img src="./jpg/image/1104afd6c968d9233b018933f60d68012.png" alt=""></p>
+                <p>我是房东</p>
+            </li>
+        </ul>
+    </section>
+    <section class="mf">
+        <ul>
+            <li>
+                <p><img src="./jpg/image/1104afd6c968d9233b018933f60d68013.png" alt=""></p>
+                <p>买房必看</p>
+            </li>
+            <li>
+                <p><img src="./jpg/image/1104afd6c968d9233b018933f60d68014.png" alt=""></p>
+                <p>房贷计算</p>
+            </li>
+            <li>
+                <p><img src="./jpg/image/1104afd6c968d9233b018933f60d68015.png" alt=""></p>
+                <p>查房价</p>
+            </li>
+        </ul>
+    </section>
+    <section class="hq">
+        <img src="./jpg/image/1104afd6c968d9233b018933f60d68016.png" alt="">
+        <p class="p1">
+            安顺行情 <span>4953元/m</span>
+        </p>
+        <p class="p2"> 比上月 <span> </span> <span> 0.05% </span><i></i>
+        </p>
+
+    </section>
+    <section class="nb">
+        <ul>
+            <li>
+                <p>南北通透</p>
+                <p>通风好优质户型</p>
+                <p><img src="./jpg/image/index/img2.png" alt=""><img src="./jpg/image/index/img3.png" alt=""></p>
+            </li>
+            <li>
+                <p>房东急售</p>
+                <p>房东认证，诚信出售</p>
+                <p><img src="./jpg/image/index/img2.png" alt=""><img src="./jpg/image/index/img3.png" alt=""></p>
+            </li>
+        </ul>
+    </section>
+    <section class="list-title">
+        <ul class="ul-block">
+            <li class="">
+                区域
+                <p class=""></p>
+            </li>
+            <li id="">
+                价格
+                <p class=""></p>
+            </li>
+            <li id="">
+                房型
+                <p class=""></p>
+            </li>
+            <li id="">
+                更多
+                <p class=""></p>
+            </li>
+        </ul>
+        <div class="none">
+            <div class="ul-none">
+                <div id="quyu-k">
+                    <div class="quyu-title" style="padding-left: 0;">
+                        <div id="quyu">
+                            区域
+                            <div class="quyu-left" style="padding-left: 0;">
+                                <div>附近A
+                                    <div class="quyu-right">
+                                        <div>不限a</div>
+                                        <div>安贞a</div>
+                                        <div>奥林匹克公园a</div>
+                                        <div>百子湾a</div>
+                                        <div>北工大a</div>
+                                        <div>北苑a</div>
+                                        <div>CBDa</div>
+                                    </div>
+                                </div>
+                                <div>不限A
+                                    <div class="quyu-right">
+                                        <div>不限b</div>
+                                        <div>安贞b</div>
+                                        <div>奥林匹克公园b</div>
+                                        <div>百子湾b</div>
+                                        <div>北工大b</div>
+                                        <div>北苑b</div>
+                                        <div>CBDb</div>
+                                    </div>
+                                </div>
+                                <div>朝阳A
+                                    <div class="quyu-right">
+                                        <div>不限c</div>
+                                        <div>安贞c</div>
+                                        <div>奥林匹克公园c</div>
+                                        <div>百子湾c</div>
+                                        <div>北工大c</div>
+                                        <div>北苑c</div>
+                                        <div>CBDc</div>
+                                    </div>
+                                </div>
+                                <div>海淀A
+                                    <div class="quyu-right">
+                                        <div>不限d</div>
+                                        <div>安贞d</div>
+                                        <div>奥林匹克公园d</div>
+                                        <div>百子湾d</div>
+                                        <div>北工大d</div>
+                                        <div>北苑d</div>
+                                        <div>CBDd</div>
+                                    </div>
+                                </div>
+                                <div>昌平A
+                                    <div class="quyu-right">
+                                        <div>不限e</div>
+                                        <div>安贞e</div>
+                                        <div>奥林匹克公园e</div>
+                                        <div>百子湾e</div>
+                                        <div>北工大e</div>
+                                        <div>北苑e</div>
+                                        <div>CBDe</div>
+                                    </div>
+                                </div>
+                                <div>丰台A
+                                    <div class="quyu-right">
+                                        <div>不限f</div>
+                                        <div>安贞f</div>
+                                        <div>奥林匹克公园f</div>
+                                        <div>百子湾f</div>
+                                        <div>北工大f</div>
+                                        <div>北苑f</div>
+                                        <div>CBDf</div>
+                                    </div>
+                                </div>
+                                <div>石景山A
+                                    <div class="quyu-right">
+                                        <div>不限g</div>
+                                        <div>安贞g</div>
+                                        <div>奥林匹克公园g</div>
+                                        <div>百子湾g</div>
+                                        <div>北工大g</div>
+                                        <div>北苑g</div>
+                                        <div>CBDg</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="quyu">
+                            地铁
+                            <div class="quyu-left" style="padding-left: 0;">
+                                <div class="fujin">附近B
+                                    <div class="quyu-right">
+                                        <div>不限A</div>
+                                        <div>安贞A</div>
+                                        <div>奥林匹克公园A</div>
+                                        <div>百子湾A</div>
+                                        <div>北工大A</div>
+                                        <div>北苑A</div>
+                                        <div>CBDA</div>
+                                    </div>
+                                </div>
+                                <div>不限B
+                                    <div class="quyu-right">
+                                        <div>不限B</div>
+                                        <div>安贞B</div>
+                                        <div>奥林匹克公园B</div>
+                                        <div>百子湾B</div>
+                                        <div>北工大B</div>
+                                        <div>北苑B</div>
+                                        <div>CBDB</div>
+                                    </div>
+                                </div>
+                                <div>朝阳B
+                                    <div class="quyu-right">
+                                        <div>不限C</div>
+                                        <div>安贞C</div>
+                                        <div>奥林匹克公园C</div>
+                                        <div>百子湾C</div>
+                                        <div>北工大C</div>
+                                        <div>北苑C</div>
+                                        <div>CBDC</div>
+                                    </div>
+                                </div>
+                                <div>海淀B
+                                    <div class="quyu-right">
+                                        <div>不限D</div>
+                                        <div>安贞D</div>
+                                        <div>奥林匹克公园D</div>
+                                        <div>百子湾D</div>
+                                        <div>北工大D</div>
+                                        <div>北苑D</div>
+                                        <div>CBDD</div>
+                                    </div>
+                                </div>
+                                <div>昌平B
+                                    <div class="quyu-right">
+                                        <div>不限E</div>
+                                        <div>安贞E</div>
+                                        <div>奥林匹克公园E</div>
+                                        <div>百子湾E</div>
+                                        <div>北工大E</div>
+                                        <div>北苑E</div>
+                                        <div>CBDE</div>
+                                    </div>
+                                </div>
+                                <div>丰台B
+                                    <div class="quyu-right">
+                                        <div>不限F</div>
+                                        <div>安贞F</div>
+                                        <div>奥林匹克公园F</div>
+                                        <div>百子湾F</div>
+                                        <div>北工大F</div>
+                                        <div>北苑F</div>
+                                        <div>CBDF</div>
+                                    </div>
+                                </div>
+                                <div>石景山B
+                                    <div class="quyu-right">
+                                        <div>不限G</div>
+                                        <div>安贞G</div>
+                                        <div>奥林匹克公园G</div>
+                                        <div>百子湾G</div>
+                                        <div>北工大G</div>
+                                        <div>北苑G</div>
+                                        <div>CBDG</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ul-none">
+                <div>不限</div>
+                <div>100万以下</div>
+                <!-- <span><input type="checkbox" checked></span> -->
+                <div>100万-150万</div>
+                <!-- <span><input type="checkbox"></span> -->
+                <div>150万-200万</div>
+                <!-- <span><input type="checkbox"></span> -->
+                <div>200万-250万</div>
+                <!-- <span><input type="checkbox"></span> -->
+                <div>250万-300万</div>
+                <!-- <span><input type="checkbox"></span> -->
+                <p class="custom">
+                    <span>自定义价格</span>
+                    <a href="">最小</a>
+                    <span class="line">-</span>
+                    <a href="" style="margin: 0 1.5rem;">最大</a>
+                    <a href="" class="make">确定</a>
+                </p>
+            </div>
+            <div class="ul-none">
+                <div>不限</div>
+                <div>1室</div>
+                <span><input type="radio" name="aa" checked></span>
+                <div>2室</div>
+                <span><input type="radio" name="aa"></span>
+                <div>3室</div>
+                <span><input type="radio" name="aa"></span>
+                <div>4室</div>
+                <span><input type="radio" name="aa"> </span>
+                <div>5室</div>
+                <span><input type="radio" name="aa"></span>
+                <a href="#" class="yes">确定</a>
+            </div>
+            <div class="ul-none">
+                <div class="qy ">区域</div>
+                <div id="border">
+                    <ul>
+                        <li>南</li>
+                        <li>南北</li>
+                        <li>东</li>
+                        <li>西</li>
+                        <li>北</li>
+                    </ul>
+                </div>
+                <div class="qy">面积（平米）</div>
+                <div id="border">
+                    <ul>
+                        <li>50以下</li>
+                        <li>50-70</li>
+                        <li>70-90</li>
+                        <li>90-110</li>
+                        <li>110-130</li>
+                        <li>130-150</li>
+                        <li>150-200</li>
+                        <li>200以上</li>
+                    </ul>
+                </div>
+                <div class="qy">标签</div>
+                <div style="height: 13rem;" id="border">
+                    <ul>
+                        <li>学区房</li>
+                        <li>地铁房</li>
+                        <li>不限购</li>
+                        <li>满两年</li>
+                        <li>满五唯一</li>
+                        <li>降价</li>
+                        <li>新上</li>
+                        <li>独家</li>
+                        <li>有钥匙</li>
+                    </ul>
+                </div>
+                <div class="qy">楼龄</div>
+                <div id="border">
+                    <ul>
+                        <li>5年以内</li>
+                        <li>10年以内</li>
+                        <li>10-20年</li>
+                        <li>20年以上</li>
+                    </ul>
+                </div>
+                <div class="qy">楼层</div>
+                <div id="border">
+                    <ul>
+                        <li>低楼层</li>
+                        <li>中楼层</li>
+                        <li>高楼层</li>
+                    </ul>
+                </div>
+                <a href="#" class="yes">确定</a>
+            </div>
+        </div>
+    </section>
+    <div class="rmfy-list">
+        <ul id="ershoufang">
+            <li>
+                <img src="./jpg/image/index/img1.jpg" alt="">
+                <h3>文化部最T中间层</h3>
+                <p>2室1厅96m <span class="span-c">1105万</span></p>
+                <p class="p-a">红庙北里<span class="span-h">14268元/平</span></p>
+                <a href="">学区房</a>
+                <a href="">独家</a>
+            </li>
+            <li>
+                <img src="./jpg/image/index/img2.png" alt="">
+                <h3>光大水墨 精装复式 稀缺</h3>
+                <p>2室1厅96m <span class="span-c">280万</span></p>
+                <p class="p-a">光大水墨<span class="span-h">14268元/平</span></p>
+                <a href="">学区房</a>
+                <a href="">独家</a>
+                <a href="">满五唯一</a>
+            </li>
+            <li>
+                <img src="./jpg/image/index/img3.png" alt="">
+                <h3>青年会最T中间层</h3>
+                <p>2室1厅96m <span class="span-c">320万</span></p>
+                <p class="p-a">北京新天地<span class="span-h">14268元/平</span></p>
+                <a href="">地铁房</a>
+                <a href="">独家</a>
+            </li>
+            <li>
+                <img src="./jpg/image/index/img1.jpg" alt="">
+                <h3>朝阳北路 赠车库 自主首选</h3>
+                <p>5室3厅 260m</p>
+                <p class="p-a">武夷花园二手房</p>
+                <a class="gn" href="">集体供暖</a>
+                <p class="jg">9268元/平</p>
+            </li>
+            <li>
+                <img src="./jpg/image/index/img2.png" alt="">
+                <h3>金汉旭城 董娜金角一居</h3>
+                <p>1室1厅 96m 东南 </p>
+                <p class="p-a">鲁谷二手房</p>
+                <a class="gn" href="">集体供暖</a>
+                <p class="jg">4268元/平</p>
+            </li>
+            <li>
+                <img src="./jpg/image/index/img2.png" alt="">
+                <h3>青年汇二期 免税三居</h3>
+                <p>3室2厅 129m </p>
+                <p class="p-a">红庙北里</p>
+                <a class="gn" href="">集体供暖</a>
+                <p class="jg">2468元/平</p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

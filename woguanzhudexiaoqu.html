@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我关注的小区</title>
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/zufangliebiao-con.css">
+    <link rel="stylesheet" href="./css/zufangliebiao-header.css">
+    <script src="./js/zepto.js"></script>
+    <script src="./js/tiaozhuan.js"></script>
+    <style>
+        .header-list {
+            height: 4rem;
+            border-bottom: 1px solid #E4E4E4;
+            background: #fff;
+        }
+        
+        .header-list p,
+        .header-list img {
+            float: left;
+            line-height: 4rem;
+            color: #757575;
+        }
+        
+        .header-list img {
+            height: 3.9rem;
+            padding-left: 2rem;
+        }
+        
+        .header-list p {
+            font-size: 14px;
+            padding-left: 2rem;
+        }
+    </style>
+    <script>
+        $(function() {
+            $(".ul-block li").mouseover(function() {
+                var index = $(this).index();
+                $(".none .ul-none").eq(index).show().siblings().hide();
+                $(this).addClass("list-active").siblings().removeClass("list-active")
+                $(this).children().addClass("p2-active");
+                $(this).siblings().children().removeClass("p2-active");
+                $(".none").css({
+                    "display": "block"
+                });
+            })
+            $(".ul-none").click(function() {
+                $(".none").css({
+                    "display": "none"
+                });
+            })
+        })
+    </script>
+    <link rel="stylesheet" href="./css/woguanzhudexiaoqu.css">
+</head>
+
+<body>
+    <header class="header-dl ">
+        <img class="logo " src="./jpg/image/index/logo.jpg" alt="">
+        <select name="" id="">
+            <option value="bei">北京</option>
+        </select>
+        <img class="my" id="home" src="./jpg/image/index/my.jpg" alt="">
+        <img class="xiazai" src="./jpg/image/index/xiazai.jpg" alt="">
+    </header>
+    <section class="header-list">
+        <div>
+            <p id="home">首页</p>
+            <img src="./jpg/image/index/7da0b6e58606025d81b7ac64df9aba9.png" alt="">
+            <p id="my-t">我的</p>
+            <img src="./jpg/image/index/7da0b6e58606025d81b7ac64df9aba9.png" alt="">
+            <p>我关注的小区</p>
+        </div>
+    </section>
+
+
+    <div class="rmfy-list">
+        <ul id="ershoufang">
+            <li>
+                <img src="./jpg/image/index/img1.jpg" alt="">
+                <h4>辉煌国际</h4>
+                <p>昌平区-回龙观</p>
+                <p class="p-a">2007年建成<span class="jg">37050元/平</span></p>
+                <p class="p-a">板塔结合</p>
+
+            </li>
+            <li>
+                <img src="./jpg/image/index/img2.png" alt="">
+                <h4>万寿园</h4>
+                <p>昌平区-回龙观</p>
+                <p class="p-a">2007年建成<span class="jg">37850元/平</span></p>
+                <p class="p-a">板塔结合</p>
+            </li>
+            <li>
+                <img src="./jpg/image/index/img3.png" alt="">
+                <h4>红莲南里5号</h4>
+                <p>昌平区-回龙观 </p>
+                <p class="p-a">2007年建成<span class="jg">90050元/平</span></p>
+                <p class="p-a">板塔结合</p>
+            </li>
+            <li>
+                <img src="./jpg/image/index/img1.jpg" alt="">
+                <h4>万寿西街16号</h4>
+                <p>昌平区-回龙观</p>
+                <p class="p-a">2007年建成<span class="jg">70050元/平</span></p>
+                <p class="p-a">板塔结合</p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
